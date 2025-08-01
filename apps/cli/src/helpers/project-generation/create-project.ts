@@ -32,6 +32,7 @@ import {
 	setupExamplesTemplate,
 	setupFrontendTemplates,
 } from "./template-manager";
+import { setupFrontendDependencies } from "../setup/frontend-setup";
 
 export async function createProject(options: ProjectConfig) {
 	const projectDir = options.projectDir;
@@ -42,6 +43,7 @@ export async function createProject(options: ProjectConfig) {
 
 		await copyBaseTemplate(projectDir, options);
 		await setupFrontendTemplates(projectDir, options);
+		await setupFrontendDependencies(options);
 		await setupBackendFramework(projectDir, options);
 		if (!isConvex) {
 			await setupDbOrmTemplates(projectDir, options);
