@@ -35,4 +35,4 @@ export async function setupFrontendDependencies(config: ProjectConfig) {
 	} else {
 		consola.info("NativeWind not detected, skipping TailwindCSS dependencies");
 	}
-} 
+}

@@ -9,6 +9,7 @@ import { setupAuth } from "../setup/auth-setup";
 import { setupBackendDependencies } from "../setup/backend-setup";
 import { setupDatabase } from "../setup/db-setup";
 import { setupExamples } from "../setup/examples-setup";
+import { setupFrontendDependencies } from "../setup/frontend-setup";
 import {
 	generateCloudflareWorkerTypes,
 	setupRuntime,
@@ -32,7 +33,6 @@ import {
 	setupExamplesTemplate,
 	setupFrontendTemplates,
 } from "./template-manager";
-import { setupFrontendDependencies } from "../setup/frontend-setup";
 
 export async function createProject(options: ProjectConfig) {
 	const projectDir = options.projectDir;
